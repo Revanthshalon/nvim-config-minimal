@@ -10,11 +10,11 @@ return {
       -- Enable inlay hints
       if client.server_capabilities.inlayHintProvider then
         -- The correct syntax: enable(buffer, enabled)
-        vim.lsp.inlay_hint.enable(true, { bufnr })
+        vim.lsp.inlay_hint.enable(false, { bufnr })
       end
       -- Optional: Add keymaps for inlay hints
       vim.keymap.set("n", "<leader>ih", function()
-        local enabled = vim.lsp.inlay_hint.is_enabled({ bufnr })
+        local enabled = not vim.lsp.inlay_hint.is_enabled({ bufnr })
         vim.lsp.inlay_hint.enable(enabled, { bufnr })
       end, { desc = "Toggle Inlay Hints" })
     end
