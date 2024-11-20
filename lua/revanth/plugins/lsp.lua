@@ -43,6 +43,7 @@ return {
         { name = 'nvim_lsp' },
         { name = 'nvim-lsp_signature_help'},
         { name = 'luasnip' }, -- For luasnip users.
+        { name = 'crates' },
       }, {
           { name = 'buffer' },
         })
